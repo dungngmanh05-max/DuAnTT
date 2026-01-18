@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thiết Bị Nhi - Sản Khoa - Chăm Sóc Trẻ Sơ Sinh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #fff0f5, #ffebee);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            color: #c2185b;
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        .card-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 24px;
+        }
+        .card h3 {
+            color: #c2185b;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+        .view-all {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: #d81b60;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #c2185b;
+            transform: translateY(-3px);
+        }
+
+        /* Màu nền nhẹ nhàng cho từng loại */
+        .longap { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+        .giuonghoisuc { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+        .denchieu { background: linear-gradient(135deg, #fffde7, #fff9c4); }
+        .noisinh { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Thiết Bị Nhi - Sản Khoa</h1>
+            <p class="subtitle">Chăm sóc tối ưu cho mẹ và bé – Công nghệ hiện đại, an toàn và ấm áp</p>
+        </header>
+
+        <div class="grid">
+
+            <div class="card longap">
+                <div class="card-img" style="background-image: url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/04/newborn_in_incubator-1296x728-header.jpg?w=1155&h=1528');"></div>
+                <div class="card-content">
+                    <h3>Lồng Ấp Trẻ Sơ Sinh (Infant Incubator)</h3>
+                    <p>Lồng ấp hiện đại kiểm soát nhiệt độ, độ ẩm, oxy chính xác. Bảo vệ trẻ non tháng, nhẹ cân, suy hô hấp trong môi trường vô trùng, ổn định.</p>
+                </div>
+            </div>
+
+            <div class="card giuonghoisuc">
+                <div class="card-img" style="background-image: url('https://www.alltrustedmed.com/uploads/image/20211209/15/8q80-neonatal-warmer.jpg');"></div>
+                <div class="card-content">
+                    <h3>Giường Hồi Sức & Sưởi Ấm Trẻ Sơ Sinh (Radiant Warmer)</h3>
+                    <p>Giường sưởi ấm bức xạ mở, tích hợp hồi sức cấp cứu, đo cân nặng, theo dõi nhịp tim – hô hấp. Dùng ngay sau sinh và trong NICU.</p>
+                </div>
+            </div>
+
+            <div class="card denchieu">
+                <div class="card-img" style="background-image: url('https://www.draeger.com/Media/Content/Content/baby-given-phototherapy-treatment-with-bililux-led-phototherapy-light-system-4-3-d-3713-2016-v2.jpg');"></div>
+                <div class="card-content">
+                    <h3>Đèn Chiếu Vàng Da (Phototherapy Unit)</h3>
+                    <p>Đèn LED chiếu bilirubin hiệu quả cao, không tỏa nhiệt, giảm thời gian điều trị vàng da sơ sinh. Có chế độ mắt bảo vệ, theo dõi cường độ ánh sáng.</p>
+                </div>
+            </div>
+
+            <div class="card noisinh">
+                <div class="card-img" style="background-image: url('https://c8.alamy.com/comp/3D663CP/newborn-sleeping-peacefully-in-a-hospital-bassinet-3D663CP.jpg');"></div>
+                <div class="card-content">
+                    <h3>Nôi Sơ Sinh (Newborn Bassinet / Cradle)</h3>
+                    <p>Nôi an toàn, thoáng khí, có bánh xe di chuyển dễ dàng, tích hợp cân điện tử, ngăn kéo đựng dụng cụ. Thiết kế thân thiện cho phòng sinh và hậu sản.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-all">
+            <a href="#" class="btn">Xem tất cả các thiết bị Nhi - Sản khoa →</a>
+        </div>
+    </div>
+     <div style="text-align: center; margin: 50px 0;">
+            <a href="/" class="item-more" style="background: #6c757d; padding: 12px 30px; font-size: 1.1em;">
+                ← Quay lại trang chủ
+            </a>
+        </div>
+</body>
+</html>

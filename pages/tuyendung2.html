@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ứng Tuyển Việc Làm </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 30px 15px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #4364f7 0%, #6fb1fc 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.1rem;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      opacity: 0.9;
+      font-size: 1.05rem;
+    }
+
+    .form-container {
+      padding: 40px 35px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.25s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #4364f7;
+      box-shadow: 0 0 0 3px rgba(67,100,247,0.15);
+    }
+
+    .row {
+      display: flex;
+      gap: 24px;
+    }
+
+    .row > div {
+      flex: 1;
+    }
+
+    .upload-cv {
+      border: 2px dashed #aaa;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: #f9f9f9;
+    }
+
+    .upload-cv:hover {
+      border-color: #4364f7;
+      background: #f0f4ff;
+    }
+
+    .upload-cv i {
+      font-size: 2.5rem;
+      color: #4364f7;
+      margin-bottom: 10px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(90deg, #4364f7 0%, #5a7eff 100%);
+      color: white;
+      border: none;
+      padding: 16px 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(67,100,247,0.35);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 30px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .row {
+        flex-direction: column;
+        gap: 0;
+      }
+      .form-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Ứng Tuyển Ngay</h1>
+      <p>Vị trí: Ký Sư Bảo Trì Thiết Bị Y Tế</p>
+    </div>
+
+    <div class="form-container">
+      <form id="jobApplicationForm" action="#" method="POST" enctype="multipart/form-data">
+
+        <div class="row">
+          <div class="form-group">
+            <label for="fullname">Họ và tên <span style="color:red;">*</span></label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Nguyễn Văn A"/>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span style="color:red;">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@gmail.com"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="phone">Số điện thoại <span style="color:red;">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="0987 654 321"/>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Nơi ở hiện tại</label>
+            <input type="text" id="location" name="location" placeholder="Quận 1, TP.HCM"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cv">CV của bạn (PDF/Word - tối đa 10MB)</label>
+          <div class="upload-cv" id="uploadArea">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>Kéo thả file CV vào đây hoặc</p>
+            <p><strong>Click để chọn file</strong></p>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" hidden/>
+          </div>
+          <p id="fileName" style="margin-top:10px; color:#555; font-size:0.95rem;"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="coverletter">Thư ứng tuyển / Giới thiệu bản thân (khuyến khích)</label>
+          <textarea id="coverletter" name="coverletter" rows="5" 
+            placeholder="Một vài dòng về bản thân, kinh nghiệm, lý do bạn phù hợp với vị trí..."></textarea>
+        </div>
+
+         <a href="/pages/recruitment.html" class="item-more" style="background: #31e409; padding: 12px 30px; font-size: 1.1em;">
+        ← Quay lại 
+            </a>
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-paper-plane"></i> GỬI HỒ SƠ ỨNG TUYỂN
+        </button>
+
+      </form>
+
+      <div class="footer-note">
+        Chúng tôi cam kết bảo mật thông tin cá nhân của bạn
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Xử lý khu vực upload CV
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('cv');
+    const fileNameDisplay = document.getElementById('fileName');
+
+    uploadArea.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', function() {
+      if (this.files.length > 0) {
+        fileNameDisplay.textContent = this.files[0].name;
+        uploadArea.style.borderColor = '#4364f7';
+      }
+    });
+
+    // Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      uploadArea.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      uploadArea.addEventListener(eventName, () => {
+        uploadArea.style.borderColor = '#4364f7';
+        uploadArea.style.background = '#f0f4ff';
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      uploadArea.addEventListener(eventName, () => {
+        uploadArea.style.borderColor = '#aaa';
+        uploadArea.style.background = '#f9f9f9';
+      });
+    });
+
+    uploadArea.addEventListener('drop', function(e) {
+      let dt = e.dataTransfer;
+      let files = dt.files;
+      if (files.length > 0) {
+        fileInput.files = files;
+        fileNameDisplay.textContent = files[0].name;
+      }
+    });
+  </script>
+</body>
+</html>

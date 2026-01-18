@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sản phẩm</title>
+        <!-- ICON -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="../assets/img/logo.jpg" />
+
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- RESET CSS (luôn đầu tiên) -->
+        <link rel="stylesheet" href="../assets/css/resets.css" />
+
+        <!-- BASE / COMMON STYLE -->
+        <link rel="stylesheet" href="../assets/css/base.css" />
+
+        <!-- MAIN (layout, header, footer, nav...) -->
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <style>
+            /* Dropdown Sản Phẩm - Hover */
+.nav-product-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-top: 3px solid #ff8c00;
+    padding: 40px 0;
+    display: none;
+    z-index: 1000;
+}
+
+.nav-product-item {
+    position: relative;
+}
+
+.nav-product-item:hover .nav-product-dropdown {
+    display: block;
+}
+
+/* Container bên trong dropdown giống hệt phần sản phẩm hiện tại */
+.dropdown-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.dropdown-category {
+    background-color: #f0f8ff;
+    padding: 20px 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.dropdown-category h3 {
+    font-size: 16px;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+.dropdown-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.dropdown-category ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.dropdown-category ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.dropdown-category ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.dropdown-category .view-all a {
+    color: #0056b3;
+    font-weight: bold;
+}
+            .product-categories {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+        .category {
+            background-color: #f0f8ff;
+            padding: 20px 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .category h3 {
+            font-size: 16px;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+        .category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .category ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .category ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .category ul li a:hover {
+            text-decoration: underline;
+        }
+        .view-all {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <main class="app">
+            <div id="header-include"></div>
+            
+            <div class="product-categories">
+                <!-- Cột 1 -->
+                <div class="category">
+                    <h3>Chẩn đoán hình ảnh</h3>
+                    <ul>
+                        <li><a href="#">Máy chụp X - Quang</a></li>
+                        <li><a href="#">Máy Siêu âm</a></li>
+                        <li><a href="#">Hệ thống Máy nội soi</a></li>
+                        <li><a href="#">Hệ thống nội soi có từ trường</a></li>
+                        <li><a href="./1.html">Xem tất cả →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 2 -->
+                <div class="category">
+                    <h3>Thăm dò chức năng</h3>
+                    <ul>
+                        <li><a href="#">Máy Đo Điện tim</a></li>
+                        <li><a href="#">Máy đo điện não</a></li>
+                        <li><a href="#">Máy Đo chức năng hô hấp</a></li>
+                        <li><a href="./2.html">Xem tất cả →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3 -->
+                <div class="category">
+                    <h3>Cấp cứu hồi sức tích cực</h3>
+                    <ul>
+                        <li><a href="#">Máy hỗ trợ thở</a></li>
+                        <li><a href="#">Máy thở xách tay</a></li>
+                        <li><a href="#">Monitor theo dõi bệnh nhân</a></li>
+                        <li><a href="#">Máy theo dõi đồ sau gây mê và an thần</a></li>
+                        <li><a href="./3.html">Xem tất cả →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4 -->
+                <div class="category">
+                    <h3>Thiết bị phòng mổ</h3>
+                    <ul>
+                        <li><a href="#">Máy gây mê kèm thở</a></li>
+                        <li><a href="#">Bàn mổ cơ-điện-thủy lực</a></li>
+                        <li><a href="#">Đèn Mổ LED ánh sáng lạnh</a></li>
+                        <li><a href="#">Dao mổ điện</a></li>
+                        <li><a href="#">Máy hút dịch</a></li>
+                        <li><a href="./4.html">Xem tất cả →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 5 -->
+                <div class="category">
+                    <h3>Thiết bị nhi - Sản khoa</h3>
+                    <ul>
+                        <li><a href="#">Lồng ấp trẻ sơ sinh</a></li>
+                        <li><a href="#">Giường hồi sức và sưởi ấm trẻ sơ sinh</a></li>
+                        <li><a href="#">Đèn chiếu vàng da</a></li>
+                        <li><a href="#">Nôi sơ sinh</a></li>
+                        <li><a href="./5.html">Xem tất cả →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 6 -->
+                <div class="category">
+                    <h3>Thiết bị y tế khác</h3>
+                    <ul>
+                        <li><a href="#">Thiết bị y tế Gia đình</a></li>
+                        <li><a href="#">Vật tư y tế, tiêu hao, hóa chất</a></li>
+                        <li><a href="#">Các bộ dụng cụ phẫu thuật</a></li>
+                        <li><a href="#">Thiết bị thú y</a></li>
+                        <li><a href="./6.html">Xem tất cả →</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-include"></div>
+        </main>
+
+        <script src="../assets/js/layout.js"></script>
+    </body> 
+</html>

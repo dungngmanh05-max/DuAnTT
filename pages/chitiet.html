@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm - Hệ Thống Gây Mê Kèm Thở Pasithec Heyer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #003366, #005599);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+        }
+        h1 {
+            font-size: 38px;
+            margin: 0 0 10px;
+        }
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+        .back-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #003366;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        .product-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 40px 0;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .product-gallery {
+            flex: 1;
+            min-width: 300px;
+        }
+        .main-image {
+            width: 100%;
+            max-height: 600px; /* Giới hạn chiều cao để ảnh không quá lớn */
+            object-fit: contain; /* Giữ tỷ lệ ảnh, không bị méo */
+            background: #f0f0f0; /* Nền nhẹ nếu ảnh trong suốt */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .thumbnail-gallery {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .thumbnail-gallery img {
+            width: 120px; /* Tăng kích thước thumbnail lên một chút cho dễ xem */
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid #ddd;
+            transition: all 0.3s;
+        }
+        .thumbnail-gallery img:hover, .thumbnail-gallery img.active {
+            border-color: #005599;
+            transform: scale(1.1);
+        }
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        .product-details h2 {
+            color: #003366;
+            border-bottom: 3px solid #ff6600;
+            padding-bottom: 10px;
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .specs-table th {
+            background: #003366;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .specs-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .specs-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .description {
+            line-height: 1.8;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .contact-btn:hover {
+            background: #e55a00;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #003366;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HỆ THỐNG GÂY MÊ KÈM THỞ PASITHEC HEYER</h1>
+        <p class="subtitle">Thiết bị gây mê hiện đại - Công nghệ Đức</p>
+    </header>
+
+    <div class="container">
+        <!-- Nút Quay lại ở đầu trang -->
+        <div class="product-info">
+            <div class="product-gallery">
+                <!-- Ảnh chính (sử dụng ảnh thực tế từ Heyer Medical) -->
+                <img src="https://heyermedical.de/wp-content/uploads/2022/03/pasithecII1-570x450.png" alt="Hệ thống gây mê Pasithec Heyer - Ảnh chính" class="main-image" id="mainImage">
+
+                <!-- Thumbnails với ảnh thực tế đa góc -->
+                <div class="thumbnail-gallery">
+                    <img src="https://heyermedical.de/wp-content/uploads/2022/03/pasithecII1-570x450.png" alt="Góc chính" onclick="changeImage(this)" class="active">
+                    <img src="https://heyermedical.de/wp-content/uploads/2022/03/pasithec1.png" alt="Góc 1" onclick="changeImage(this)">
+                    <img src="https://heyermedical.de/wp-content/uploads/2022/03/pasithec2.png" alt="Góc 2" onclick="changeImage(this)">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/FU/XO/KP/25080941/heyer-pasithec-anesthesia-transmitting-system-.jpg" alt="Góc 3" onclick="changeImage(this)">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/JD/ZX/GO/25080941/heyer-pasithec-anesthesia-transmitting-system-.jpg" alt="Góc 4" onclick="changeImage(this)">
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h2>Thông Tin Sản Phẩm</h2>
+                <table class="specs-table">
+                    <tr>
+                        <th>Model</th>
+                        <td>Pasithec</td>
+                    </tr>
+                    <tr>
+                        <th>Hãng Sản Xuất</th>
+                        <td>HEYER Medical AG</td>
+                    </tr>
+                    <tr>
+                        <th>Xuất Xứ</th>
+                        <td>Đức</td>
+                    </tr>
+                    <tr>
+                        <th>Tiêu Chuẩn</th>
+                        <td>CE, ISO 13485, FDA</td>
+                    </tr>
+                    <tr>
+                        <th>Bảo Hành</th>
+                        <td>24 tháng</td>
+                    </tr>
+                </table>
+
+                <div class="description">
+                    <p><strong>Hệ thống gây mê Pasithec</strong> của Heyer Medical là dòng máy gây mê cao cấp được thiết kế và sản xuất tại Đức với công nghệ tiên tiến nhất hiện nay.</p>
+                    <p>Sản phẩm tích hợp hệ thống thở hiện đại, màn hình cảm ứng màu lớn, giám sát đầy đủ các thông số hô hấp và gây mê, đảm bảo an toàn tối đa cho bệnh nhân trong phẫu thuật.</p>
+                    <p>Đặc điểm nổi bật:</p>
+                    <ul>
+                        <li>Hệ thống ventilator điện tử chính xác cao</li>
+                        <li>Hỗ trợ nhiều chế độ thở: VCV, PCV, SIMV, PSV, Manual</li>
+                        <li>Giám sát khí mê, CO₂, O₂, N₂O liên tục</li>
+                        <li>Thiết kế nhỏ gọn, dễ di chuyển</li>
+                        <li>Giao diện thân thiện, dễ sử dụng</li>
+                    </ul>
+                </div>
+
+                <a href="#lien-he" class="contact-btn">Liên Hệ Tư Vấn & Báo Giá</a>
+                
+                <br><br>
+                <a href="http://127.0.0.1:5502/index.html" class="back-btn">← Quay lại trang chủ</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Công Ty Thiết Bị Y Tế. All rights reserved.</p>
+        <p>Hotline: 0909 123 456 | Email: info@thietbiyte.com.vn</p>
+    </footer>
+
+    <!-- Script đơn giản để thay đổi ảnh chính khi click thumbnail -->
+    <script>
+        function changeImage(element) {
+            document.getElementById('mainImage').src = element.src;
+            document.querySelectorAll('.thumbnail-gallery img').forEach(img => img.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>

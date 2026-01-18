@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuyển Dụng - TM Hitech</title>
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS chính -->
+    <link rel="stylesheet" href="../assets/css/resets.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <style>
+        /* ====================== COMMON ====================== */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 96%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .breadcrumb {
+            padding: 20px 0 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        /* ====================== BANNER ====================== */
+        .banner {
+            position: relative;
+            height: 500px;
+            background: url('../assets/img/tuyendung.jpg') center top / cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .header-spacer {
+            height: 120px;
+        }
+
+        /* ====================== NỘI DUNG TUYỂN DỤNG ====================== */
+        /* ĐÃ SỬA: Không chồng lên banner nữa, chỉ kéo sát hơn một cách hợp lý */
+        .recruitment-content {
+            max-width: 1280px;
+            width: 96%;
+            margin: 50px auto 80px; /* Giảm khoảng cách trên xuống 50px (trước là -80px) để sát banner nhưng không che breadcrumb */
+            padding: 60px 40px 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0,86,179,0.9), rgba(255,140,0,0.8));
+            color: #fff;
+            text-align: center;
+            padding: 80px 40px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+        }
+        .hero-section h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+        .hero-section p {
+            font-size: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .section { margin-bottom: 80px; }
+        .section h2 {
+            font-size: 36px;
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ff8c00;
+            border-radius: 2px;
+        }
+
+        .about-company {
+            background: #f8fdff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .about-company p {
+            max-width: 900px;
+            margin: 0 auto 24px;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .benefit-item {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .benefit-item:hover {
+            transform: translateY(-10px);
+        }
+        .benefit-item i {
+            font-size: 50px;
+            color: #ff8c00;
+            margin-bottom: 24px;
+        }
+        .benefit-item h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+        .benefit-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 35px;
+        }
+        .job-item {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 6px solid #ff8c00;
+            transition: transform 0.3s ease;
+        }
+        .job-item:hover {
+            transform: translateY(-8px);
+        }
+        .job-item h3 {
+            font-size: 24px;
+            color: #0056b3;
+            margin-bottom: 12px;
+        }
+        .job-item .salary {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff8c00;
+            margin-bottom: 20px;
+        }
+        .job-item ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .job-item a {
+            background: #ff8c00;
+            color: #fff;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .job-item a:hover {
+            background: #e67e00;
+        }
+
+        .why-join {
+            background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+            padding: 60px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .why-join ul {
+            max-width: 900px;
+            margin: 30px auto;
+            text-align: left;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        /* ====================== RESPONSIVE ====================== */
+        @media (max-width: 1024px) {
+            .banner {
+                height: 400px;
+            }
+            .recruitment-content {
+                margin: 40px auto 60px;
+                padding: 50px 30px 30px;
+            }
+            .hero-section h1 { font-size: 42px; }
+            .hero-section p { font-size: 18px; }
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                height: 300px;
+                background-position: center center;
+            }
+            .recruitment-content {
+                margin: 30px auto 50px;
+                padding: 40px 20px 30px;
+                border-radius: 12px;
+            }
+            .hero-section {
+                padding: 60px 20px;
+            }
+            .hero-section h1 { font-size: 36px; }
+            .section h2 { font-size: 30px; }
+            .job-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div id="header-include"></div>
+        <div class="header-spacer"></div>
+
+        <!-- Banner -->
+        <section class="banner">
+            <div class="banner-overlay"></div>
+        </section>
+
+        <div class="container">
+            <!-- Breadcrumb - HIỂN THỊ BÌNH THƯỜNG, KHÔNG BỊ CHE -->
+            <div class="breadcrumb">
+                <a href="#">Trang chủ</a> / <span>Tuyển Dụng</span>
+            </div>
+
+            <!-- Nội dung trang Tuyển dụng - ĐÃ SỬA ĐỂ KHÔNG CHE BREADCRUMB -->
+            <div class="recruitment-content">
+
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <h1>Gia Nhập Đội Ngũ TM Hitech</h1>
+                    <p>Chúng tôi đang tìm kiếm những tài năng đam mê công nghệ y tế, cùng chung sứ mệnh mang đến thiết bị y tế cao cấp chính hãng cho hệ thống chăm sóc sức khỏe Việt Nam.</p>
+                </section>
+
+                <!-- Giới thiệu ngắn về công ty -->
+                <section class="section about-company">
+                    <h2>Về Công Ty Chúng Tôi</h2>
+                    <p>Công ty Cổ phần Thiết bị Công nghệ Cao TM (TM Hitech.,JSC) thành lập năm 1997, là doanh nghiệp hàng đầu Việt Nam chuyên nhập khẩu và phân phối thiết bị y tế cao cấp từ các thương hiệu uy tín thế giới.</p>
+                    <p>Với hơn 25 năm kinh nghiệm, chúng tôi tự hào đồng hành cùng hàng trăm bệnh viện, phòng khám trên toàn quốc, góp phần nâng cao chất lượng chẩn đoán và điều trị.</p>
+                </section>
+
+                <!-- Lý do gia nhập -->
+                <section class="section">
+                    <h2>Tại Sao Chọn TM Hitech?</h2>
+                    <div class="why-join">
+                        <ul>
+                            <li>Môi trường làm việc chuyên nghiệp, năng động và sáng tạo</li>
+                            <li>Cơ hội đào tạo, phát triển bản thân cùng chuyên gia hàng đầu</li>
+                            <li>Chế độ lương thưởng cạnh tranh, phúc lợi đầy đủ (BHXH, nghỉ phép, teambuilding...)</li>
+                            <li>Tham gia các dự án lớn với bệnh viện hàng đầu</li>
+                            <li>Văn hóa công ty gắn kết, hỗ trợ lẫn nhau</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Phúc lợi -->
+                <section class="section">
+                    <h2>Phúc Lợi Nổi Bật</h2>
+                    <div class="benefits">
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <h3>Lương Cạnh Tranh</h3>
+                            <p>Lương thưởng theo năng lực + thưởng hiệu suất</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <h3>Bảo Hiểm Sức Khỏe</h3>
+                            <p>BHXH đầy đủ + khám sức khỏe định kỳ</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-plane"></i>
+                            <h3>Nghỉ Phép & Du Lịch</h3>
+                            <p>Nghỉ phép năm + teambuilding hàng năm</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Đào Tạo</h3>
+                            <p>Đào tạo chuyên môn trong và ngoài nước</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Vị trí đang tuyển -->
+                <section class="section">
+                    <h2>Vị Trí Đang Tuyển Dụng</h2>
+                    <div class="job-list">
+                        <!-- Ví dụ vị trí 1 -->
+                        <div class="job-item">
+                            <h3>Nhân Viên Kinh Doanh Thiết Bị Y Tế</h3>
+                            <div class="salary">15 - 30 triệu + hoa hồng</div>
+                            <ul>
+                                <li>Tìm kiếm và phát triển khách hàng mới (bệnh viện, phòng khám)</li>
+                                <li>Tư vấn, giới thiệu sản phẩm thiết bị y tế cao cấp</li>
+                                <li>Theo dõi đơn hàng, chăm sóc khách hàng cũ</li>
+                                <li>Báo cáo doanh số hàng tháng</li>
+                            </ul>
+                            <a href="./tuyendung.html">Ứng Tuyển Ngay</a>
+                        </div>
+
+                        <!-- Ví dụ vị trí 2 -->
+                        <div class="job-item">
+                            <h3>Kỹ Sư Bảo Trì Thiết Bị Y Tế</h3>
+                            <div class="salary">12 - 20 triệu</div>
+                            <ul>
+                                <li>Bảo trì, sửa chữa thiết bị y tế tại khách hàng</li>
+                                <li>Hướng dẫn sử dụng thiết bị cho nhân viên y tế</li>
+                                <li>Lập kế hoạch bảo dưỡng định kỳ</li>
+                                <li>Hỗ trợ kỹ thuật qua điện thoại</li>
+                            </ul>
+                            <a href="./tuyendung2.html">Ứng Tuyển Ngay</a>
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 40px; font-size: 17px;">Thấy vị trí phù hợp: Gửi CV về email: hr@DEVstech.vn để chúng tôi lưu hồ sơ cho các cơ hội sau.</p>
+                </section>
+
+            </div>
+        </div>
+
+        <div id="footer-include"></div>
+    </main>
+
+    <script src="../assets/js/layout.js"></script>
+</body>
+</html>

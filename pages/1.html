@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chẩn Đoán Hình Ảnh - Thiết Bị Hiện Đại</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #f0f7ff, #e6f0ff);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            color: #004c99;
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        .card-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 24px;
+        }
+        .card h3 {
+            color: #004c99;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+        .view-all {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #004c99;
+            transform: translateY(-3px);
+        }
+
+        /* Màu nền cho từng loại */
+        .xquang { background: linear-gradient(135deg, #e6f0ff, #d6e6ff); }
+        .sieuam { background: linear-gradient(135deg, #e6fff0, #d6ffe6); }
+        .noisoi { background: linear-gradient(135deg, #fff0e6, #ffe6d6); }
+        .noisoitruong { background: linear-gradient(135deg, #f0e6ff, #e6d6ff); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Chẩn Đoán Hình Ảnh</h1>
+            <p class="subtitle">Công nghệ hiện đại – Chẩn đoán chính xác – Điều trị hiệu quả</p>
+        </header>
+
+        <div class="grid">
+            <div class="card xquang">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-content">
+                    <h3>Máy chụp X-Quang</h3>
+                    <p>Chụp X-quang kỹ thuật số DR, CR hiện đại. Phát hiện nhanh các tổn thương xương, phổi, tim mạch và các bệnh lý vùng ngực - bụng.</p>
+                </div>
+            </div>
+
+            <div class="card sieuam">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1576765607924-3f7b8410a787?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-content">
+                    <h3>Máy Siêu Âm</h3>
+                    <p>Hệ thống siêu âm 4D/5D, Doppler màu, siêu âm tuyến giáp, vú, sản phụ khoa, tim mạch, bụng tổng quát với độ phân giải cao.</p>
+                </div>
+            </div>
+
+            <div class="card noisoi">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579684384363-3c1e5db670eb?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-content">
+                    <h3>Hệ thống Máy Nội Soi</h3>
+                    <p>Nội soi tiêu hóa, nội soi tai mũi họng, nội soi tiết niệu, nội soi ổ bụng… với hình ảnh Full HD/4K sắc nét.</p>
+                </div>
+            </div>
+
+            <div class="card noisoitruong">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-content">
+                    <h3>Hệ thống Nội soi có từ trường</h3>
+                    <p>Capsule Endoscopy – Nội soi viên nang bằng từ trường, không đau, không xâm lấn, khám toàn bộ ruột non.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all">
+            <a href="#" class="btn">Xem tất cả các dịch vụ chẩn đoán hình ảnh →</a>
+        </div>
+    </div>
+     <div style="text-align: center; margin: 50px 0;">
+            <a href="/" class="item-more" style="background: #6c757d; padding: 12px 30px; font-size: 1.1em;">
+                ← Quay lại trang chủ
+            </a>
+        </div>
+</body>
+</html>

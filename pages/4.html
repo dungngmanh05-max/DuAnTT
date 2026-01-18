@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thiết Bị Phòng Mổ - Công Nghệ Tiên Tiến</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            color: #01579b;
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        .card-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 24px;
+        }
+        .card h3 {
+            color: #01579b;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+        .view-all {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: #0288d1;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #01579b;
+            transform: translateY(-3px);
+        }
+
+        /* Màu nền nhẹ cho từng loại */
+        .gayme { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+        .banmo { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+        .denmo { background: linear-gradient(135deg, #fffde7, #fff9c4); }
+        .daomodiien { background: linear-gradient(135deg, #f3e5f5, #e1bee7); }
+        .mayhut { background: linear-gradient(135deg, #e0f7fa, #b2ebf2); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Thiết Bị Phòng Mổ</h1>
+            <p class="subtitle">Công nghệ cao cấp – An toàn tối ưu – Hỗ trợ phẫu thuật chính xác và hiệu quả</p>
+        </header>
+
+        <div class="grid">
+
+            <div class="card gayme">
+                <div class="card-img" style="background-image: url('https://www.mindray.com/content/dam/xpace/en/products-solutions/products/anesthesia/image/anesthesia-insight-anaesight.jpg');"></div>
+                <div class="card-content">
+                    <h3>Máy Gây Mê Kèm Thở</h3>
+                    <p>Hệ thống gây mê hiện đại tích hợp máy thở tiên tiến, kiểm soát chính xác khí mê, thông khí bảo vệ phổi, theo dõi EtCO2, FiO2, BIS… an toàn cho mọi ca mổ.</p>
+                </div>
+            </div>
+
+            <div class="card banmo">
+                <div class="card-img" style="background-image: url('https://sdexpmedical.com/wp-content/uploads/2023/03/1.jpg');"></div>
+                <div class="card-content">
+                    <h3>Bàn Mổ Cơ-Điện-Thủy Lực</h3>
+                    <p>Bàn mổ đa năng điều khiển điện-thủy lực, điều chỉnh linh hoạt mọi tư thế (ngửa, sấp, Trendelenburg, lithotomy…), chịu tải cao, tích hợp ray phụ kiện.</p>
+                </div>
+            </div>
+
+            <div class="card denmo">
+                <div class="card-img" style="background-image: url('https://www.steris.com/-/media/images/products/surgical-and-examination-lighting-systems/surgical-lights/harmonyair-a-series-surgical-lighting-system/a-series-image-1.jpg');"></div>
+                <div class="card-content">
+                    <h3>Đèn Mổ LED Ánh Sáng Lạnh</h3>
+                    <p>Đèn mổ LED không bóng, ánh sáng lạnh, độ sáng cao (lên đến 160.000 lux), điều chỉnh màu sắc, không tỏa nhiệt, giảm mỏi mắt cho ê-kíp phẫu thuật.</p>
+                </div>
+            </div>
+
+            <div class="card daomodiien">
+                <div class="card-img" style="background-image: url('https://www.aorn.org/images/default-source/the-stitch/121123/esu-monopolarbipolar_thestitch.jpg');"></div>
+                <div class="card-content">
+                    <h3>Dao Mổ Điện (Electrosurgical Unit)</h3>
+                    <p>Máy cắt đốt điện lưỡng cực/đơn cực, công suất cao, chế độ cắt chính xác, đông máu tự động, an toàn chống bỏng, phù hợp mọi loại phẫu thuật.</p>
+                </div>
+            </div>
+
+            <div class="card mayhut">
+                <div class="card-img" style="background-image: url('https://inspital.com/wp-content/uploads/2023/06/Chirurgische-Absaugungseinheiten-Ein-unverzichtbares-Werkzeug-in-der-modernen-Medizi-1.jpg');"></div>
+                <div class="card-content">
+                    <h3>Máy Hút Dịch</h3>
+                    <p>Máy hút dịch y tế mạnh mẽ, hút liên tục hoặc gián đoạn, bình chứa lớn, chống tràn, dùng cho hút máu, dịch ổ bụng, hút đàm trong phẫu thuật.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-all">
+            <a href="#" class="btn">Xem tất cả các thiết bị phòng mổ →</a>
+        </div>
+    </div>
+     <div style="text-align: center; margin: 50px 0;">
+            <a href="/" class="item-more" style="background: #6c757d; padding: 12px 30px; font-size: 1.1em;">
+                ← Quay lại trang chủ
+            </a>
+        </div>
+</body>
+</html>

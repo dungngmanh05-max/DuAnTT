@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thiết Bị Y Tế Khác - Đa Dạng & Chuyên Nghiệp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #f5f7fa, #e8ecef);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            color: #1a237e;
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        .card-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 24px;
+        }
+        .card h3 {
+            color: #1a237e;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+        .view-all {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: #3f51b5;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #1a237e;
+            transform: translateY(-3px);
+        }
+
+        /* Màu nền nhẹ cho từng loại */
+        .giadinh { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+        .vattutieuhau { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+        .bodungcu { background: linear-gradient(135deg, #fffde7, #fff9c4); }
+        .thuy { background: linear-gradient(135deg, #f3e5f5, #e1bee7); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Thiết Bị Y Tế Khác</h1>
+            <p class="subtitle">Từ chăm sóc tại nhà đến vật tư tiêu hao và thiết bị chuyên ngành – Đáp ứng mọi nhu cầu y tế</p>
+        </header>
+
+        <div class="grid">
+
+            <div class="card giadinh">
+                <div class="card-img" style="background-image: url('https://www.ahpmedicals.com/media/magefan_blog/Top_10_Must-Have_Medical_Devices_for_Home_Care.png');"></div>
+                <div class="card-content">
+                    <h3>Thiết Bị Y Tế Gia Đình</h3>
+                    <p>Máy đo huyết áp, nhiệt kế điện tử, máy xông mũi họng, máy đo đường huyết, cân sức khỏe, máy tạo oxy mini... Dễ sử dụng, hỗ trợ theo dõi sức khỏe tại nhà hàng ngày.</p>
+                </div>
+            </div>
+
+            <div class="card vattutieuhau">
+                <div class="card-img" style="background-image: url('https://www.seaskymedical.com/wp-content/uploads/2022/05/medical-syringes-and-ampoules-of-plastic-and-glass-that-were-in-use-waste.jpg');"></div>
+                <div class="card-content">
+                    <h3>Vật Tư Y Tế, Tiêu Hao, Hóa Chất</h3>
+                    <p>Kim tiêm, bông băng, gạc vô trùng, ống truyền dịch, găng tay y tế, khẩu trang, hóa chất xét nghiệm, dung dịch khử trùng... Chất lượng cao, đạt chuẩn vô trùng.</p>
+                </div>
+            </div>
+
+            <div class="card bodungcu">
+                <div class="card-img" style="background-image: url('https://thumbs.dreamstime.com/b/high-angle-close-up-view-stainless-steel-surgical-instrument-tray-various-surgical-tools-including-forceps-scissors-397644382.jpg');"></div>
+                <div class="card-content">
+                    <h3>Các Bộ Dụng Cụ Phẫu Thuật</h3>
+                    <p>Bộ dụng cụ phẫu thuật tổng quát, bộ sản khoa, bộ nha khoa, bộ chỉnh hình... Làm từ thép không gỉ cao cấp, đầy đủ kìm, kéo, dao mổ, khay đựng vô trùng.</p>
+                </div>
+            </div>
+
+            <div class="card thuy">
+                <div class="card-img" style="background-image: url('https://jorvet.com/wp-content/uploads/2025/11/abdomen-maltese-dog-who-examined-ultrasound-veterinarian-doing-ultrasound-analyze.jpg');"></div>
+                <div class="card-content">
+                    <h3>Thiết Bị Thú Y</h3>
+                    <p>Máy siêu âm thú y, máy chụp X-quang cho thú cưng, bàn mổ thú y, monitor theo dõi động vật, dụng cụ tiêm chủng, thiết bị nha khoa thú... Chuyên dụng cho phòng khám thú y hiện đại.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-all">
+            <a href="#" class="btn">Xem tất cả các thiết bị y tế khác →</a>
+        </div>
+    </div>
+     <div style="text-align: center; margin: 50px 0;">
+            <a href="/" class="item-more" style="background: #6c757d; padding: 12px 30px; font-size: 1.1em;">
+                ← Quay lại trang chủ
+            </a>
+        </div>
+</body>
+</html>

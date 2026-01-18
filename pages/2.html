@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thăm Dò Chức Năng - Thiết Bị Hiện Đại</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #f8f9ff, #eef2ff);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            color: #004080;
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        .card-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 24px;
+        }
+        .card h3 {
+            color: #004080;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+        .view-all {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #004080;
+            transform: translateY(-3px);
+        }
+
+        /* Màu nền nhẹ nhàng cho từng loại */
+        .dietim { background: linear-gradient(135deg, #e6f0ff, #d9e6ff); }
+        .dienao { background: linear-gradient(135deg, #f0e6ff, #e6d9ff); }
+        .hohap { background: linear-gradient(135deg, #e6fff5, #d9ffeb); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Thăm Dò Chức Năng</h1>
+            <p class="subtitle">Đánh giá chính xác hoạt động sinh lý – Hỗ trợ chẩn đoán và theo dõi điều trị hiệu quả</p>
+        </header>
+
+        <div class="grid">
+
+            <div class="card dietim">
+                <div class="card-img" style="background-image: url('https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://avicennacardiology.com/wp-content/uploads/2025/03/2_what-is-an-ecG-machine-complete-guide.jpg');"></div>
+                <div class="card-content">
+                    <h3>Máy Đo Điện Tim (ECG/EKG)</h3>
+                    <p>Ghi điện tim 12 chuyển đạo, Holter 24-48h, Test gắng sức. Phát hiện rối loạn nhịp, thiếu máu cơ tim, nhồi máu cơ tim sớm.</p>
+                </div>
+            </div>
+
+            <div class="card dienao">
+                <div class="card-img" style="background-image: url('https://onewelbeck.com/media/nvbfkkzh/eeg-private.jpg?rmode=max&width=751&height=536');"></div>
+                <div class="card-content">
+                    <h3>Máy Đo Điện Não (EEG)</h3>
+                    <p>Ghi điện não đồ thông thường, EEG video giám sát dài ngày, EEG ngủ. Chẩn đoán động kinh, rối loạn giấc ngủ, tổn thương não.</p>
+                </div>
+            </div>
+
+            <div class="card hohap">
+                <div class="card-img" style="background-image: url('https://www.henryschein.com/us-es/images/medical/spirometry_04.jpg');"></div>
+                <div class="card-content">
+                    <h3>Máy Đo Chức Năng Hô Hấp (Spirometry / PFT)</h3>
+                    <p>Đo lưu lượng – thể tích phổi, DLCO, test giãn phế quản. Đánh giá hen suyễn, COPD, xơ phổi, bệnh phổi hạn chế.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-all">
+            <a href="#" class="btn">Xem tất cả các dịch vụ thăm dò chức năng →</a>
+        </div>
+    </div>
+     <div style="text-align: center; margin: 50px 0;">
+            <a href="/" class="item-more" style="background: #6c757d; padding: 12px 30px; font-size: 1.1em;">
+                ← Quay lại trang chủ
+            </a>
+        </div>
+</body>
+</html>
